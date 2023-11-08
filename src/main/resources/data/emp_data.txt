@@ -1,0 +1,18 @@
+{
+    "emp_id": 1,
+    "full_name": "John Doe",
+    "dob": "1985-05-15",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "address": "123 Main St, City, Country",
+    "status": 0
+},
+{
+    "emp_id": 2,
+    "full_name": "Jane Smith",
+    "dob": "1990-02-20",
+    "email": "jane.smith@example.com",
+    "phone": "987-654-3210",
+    "address": "456 Elm St, City, Country",
+    "status": 0
+}

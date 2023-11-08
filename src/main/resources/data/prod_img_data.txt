@@ -1,0 +1,60 @@
+{
+    "product_id": 101,
+    "image_id": 1,
+    "path": "https://cdn.phuckhangmobile.com/image/iphone-12-pro-max-128gb-vang-quocte-phuckhangmobile-27951j.jpg",
+    "alternative": "Product 101 Image"
+},
+{
+    "product_id": 102,
+    "image_id": 2,
+    "path": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-s23-ultra.png",
+    "alternative": "Product 102 Image"
+},
+{
+    "product_id": 103,
+    "image_id": 3,
+    "path": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/r/e/reno10_5g_-_combo_product_-_blue.png",
+    "alternative": "Product 103 Image"
+},
+{
+    "product_id": 104,
+    "image_id": 4,
+    "path": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/r/e/reno10_5g_-_combo_product_-_blue.png",
+    "alternative": "Product 104 Image"
+},
+{
+    "product_id": 105,
+    "image_id": 5,
+    "path": "https://cdn.phuckhangmobile.com/image/iphone-12-pro-max-128gb-vang-quocte-phuckhangmobile-27951j.jpg",
+    "alternative": "Product 105 Image"
+},
+{
+    "product_id": 106,
+    "image_id": 6,
+    "path": "https://cdn.phuckhangmobile.com/image/samsung-galaxy-s20-plus-den-900-19416j.jpg",
+    "alternative": "Product 106 Image"
+},
+{
+    "product_id": 107,
+    "image_id": 7,
+    "path": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-s23-ultra.png",
+    "alternative": "Product 107 Image"
+},
+{
+    "product_id": 108,
+    "image_id": 8,
+    "path": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/n/o/nokia-215-4g-600jpg-600x600.jpg",
+    "alternative": "Product 108 Image"
+},
+{
+    "product_id": 109,
+    "image_id": 9,
+    "path": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/n/o/nokia-c32_3_.png",
+    "alternative": "Product 109 Image"
+},
+{
+    "product_id": 110,
+    "image_id": 10,
+    "path": "https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/1/_/1_365-doc-quyuen.jpg",
+    "alternative": "Product 110 Image"
+}

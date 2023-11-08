@@ -1,0 +1,80 @@
+{
+    "product_id": 101,
+    "name": "iPhone 12 Pro",
+    "description": "Description for Product iPhone 12 Pro",
+    "unit": "pcs",
+    "manufacturer_name": "Apple",
+    "status": 0
+},
+{
+    "product_id": 102,
+    "name": "Google Pixel 6 Pro",
+    "description": "Description for Product Google Pixel 6 Pro",
+    "unit": "pcs",
+    "manufacturer_name": "Google",
+    "status": 0
+},
+{
+    "product_id": 103,
+    "name": "Huawei Mate 20 Lite",
+    "description": "Description for Product Huawei Mate 20 Lite",
+    "unit": "pcs",
+    "manufacturer_name": "Huawei",
+    "status": 0
+},
+{
+    "product_id": 104,
+    "name": "Huawei Mate 9",
+    "description": "Description for Product Huawei Mate 9",
+    "unit": "pcs",
+    "manufacturer_name": "Huawei",
+    "status": 2
+},
+{
+    "product_id": 105,
+    "name": "iPhone 5S",
+    "description": "Description for Product iPhone 5S",
+    "unit": "pcs",
+    "manufacturer_name": "Apple",
+    "status": 2
+},
+{
+    "product_id": 106,
+    "name": "Samsung Galaxy S8",
+    "description": "Description for Product Samsung Galaxy S8",
+    "unit": "pcs",
+    "manufacturer_name": "Samsung",
+    "status": 0
+},
+{
+    "product_id": 107,
+    "name": "Sony Experia X",
+    "description": "Description for Product Sony Experia X",
+    "unit": "pcs",
+    "manufacturer_name": "Sony",
+    "status": 0
+},
+{
+    "product_id": 108,
+    "name": "Nokia 1280",
+    "description": "Description for Product Nokia 1280",
+    "unit": "pcs",
+    "manufacturer_name": "Nokia",
+    "status": 2
+},
+{
+    "product_id": 109,
+    "name": "Nokia Lumia 5",
+    "description": "Description for Product Nokia Lumia 5",
+    "unit": "pcs",
+    "manufacturer_name": "Nokia",
+    "status": 1
+},
+{
+    "product_id": 110,
+    "name": "ROG Phone 3",
+    "description": "Description for Product ROG Phone 3",
+    "unit": "pcs",
+    "manufacturer_name": "Asus",
+    "status": 0
+}
