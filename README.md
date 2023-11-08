@@ -10,4 +10,4 @@ thể)
    + Thống kê order theo ngày, theo khoảng thời gian.
    + Thống kê order theo nhân viên bán hàng trong 1 khoảng thời gian.
    + *** và các chức năng khác tự nghĩ ra.
-Dự án được upload lên git-hub với trang mark-down thể
+Link template: https://themewagon.com/themes/free-bootstrap-ecommerce-template-electro/
