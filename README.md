@@ -12,10 +12,11 @@ thể)
    + *** và các chức năng khác tự nghĩ ra.
 - Link template: https://themewagon.com/themes/free-bootstrap-ecommerce-template-electro/
 
+- [Hiện sản phẩm lên trang web](https://github.com/ToHieuDong/THLTWWW_WEEK7/blob/master/src/main/java/com/example/week7/frontend/controllers/ClientController.java)
 - ![](img/home.png)
-- Hiện sản phẩm lên trang web
+- [Thêm sản phẩm với **@SessionAttributes("cart")** // Lưu giỏ hàng trong session](https://github.com/ToHieuDong/THLTWWW_WEEK7/blob/master/src/main/java/com/example/week7/frontend/controllers/CartController.java)
 - ![](img/cart.png)
-- Thêm sản phẩm với **@SessionAttributes("cart")** // Lưu giỏ hàng trong session
+
 
   
 
