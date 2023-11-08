@@ -12,4 +12,6 @@ thể)
    + *** và các chức năng khác tự nghĩ ra.
 - Link template: https://themewagon.com/themes/free-bootstrap-ecommerce-template-electro/
 
+- ![](img/home.png)
+
 
