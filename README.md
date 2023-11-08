@@ -13,5 +13,10 @@ thể)
 - Link template: https://themewagon.com/themes/free-bootstrap-ecommerce-template-electro/
 
 - ![](img/home.png)
+- Hiện sản phẩm lên trang web
+- ![](img/cart.png)
+- Thêm sản phẩm với **@SessionAttributes("cart")** // Lưu giỏ hàng trong session
+
+  
 
 
