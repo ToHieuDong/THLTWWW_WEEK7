@@ -224,11 +224,14 @@
 							</tr>
 							<tr th:each="item : ${cartItems}">
 								<td th:text="${item.getQuantity()}"></td>
-								<td th:text="${item.getProduct().getName()}"</td>
+								<td th:text="${item.getProduct().getName()}"></td>
+
 							</tr>
 						</table>
 
-						<button class="btn btn-success"> Ckeck out </button>
+						<form action="/cart/checkout">
+							<button type="submit" class="btn btn-success"> Ckeck out </button>
+						</form>
 
 					</div>
 					<!--Cart Item-->

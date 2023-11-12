@@ -104,38 +104,12 @@
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Your Cart</span>
-										<div class="qty">3</div>
+										<div class="qty" th:text="${slCart}"></div>
 									</a>
 									<div class="cart-dropdown">
-										<div class="cart-list">
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="/img/product01.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
 
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="/img/product02.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
-										</div>
-										<div class="cart-summary">
-											<small>3 Item(s) selected</small>
-											<h5>SUBTOTAL: $2940.00</h5>
-										</div>
 										<div class="cart-btns">
-											<a href="#">View Cart</a>
+											<a href="/cart/cart">View Cart</a>
 											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
@@ -198,7 +172,7 @@
 									<div class="products-slick" data-nav="#slick-nav-1" >
 										<!-- product -->
 										<div class="product" th:each="pro:${productStringMap}">
-											<form th:action="@{'/cart/addToCart/' + ${pro.getKey().getProduct_id()}}" method="post">
+											<form th:action="@{'/cart/addToCart/' + ${pro.getKey().getProduct_id()}}" method="get">
 
 												<div class="product-img">
 													<img th:src="${pro.getValue()}" alt="">
@@ -225,8 +199,8 @@
 													</div>
 												</div>
 												<div class="add-to-cart">
-													<input type="hidden" name="productId" value="1"> <!-- Sử dụng Thymeleaf để đặt giá trị của productId -->
-													<input type="hidden" name="quantity" value="1">
+<!--													<input type="hidden" name="productId" value="1"> &lt;!&ndash; Sử dụng Thymeleaf để đặt giá trị của productId &ndash;&gt;-->
+<!--													<input type="hidden" name="quantity" value="1">-->
 													<button type="submit" class="add-to-cart-btn" ><i class="fa fa-shopping-cart"></i> add to cart</button>
 												</div>
 											</form>

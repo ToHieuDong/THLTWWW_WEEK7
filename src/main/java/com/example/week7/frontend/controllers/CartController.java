@@ -2,13 +2,18 @@ package com.example.week7.frontend.controllers;
 
 import com.example.week7.backend.models.CartItem;
 import com.example.week7.backend.models.Product;
+import com.example.week7.backend.repositories.ProductImageRepository;
 import com.example.week7.backend.repositories.ProductRepository;
+import com.example.week7.backend.servives.ProductService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -17,10 +22,25 @@ import java.util.Map;
 public class CartController {
     @Autowired
     private ProductRepository productRepository;
+    @Autowired
+    private ProductImageRepository productImageRepository;
+    @Autowired
+    private ProductService productService;
+
+    @GetMapping("/home")
+    public String loadHome(@ModelAttribute("cart") List<CartItem> cart, Model model) {
+        System.out.println("ngungu");
+        Map<Product, String> productStringMap = productService.getProducts();
+        model.addAttribute("productStringMap", productStringMap);
+        int sl=cart.isEmpty()?0:cart.size();
+        model.addAttribute("slCart", sl);
+
+        return "client/Home";
+    }
 
     @ModelAttribute("cart")
-    public Map<Long, CartItem> getCart() {
-        return new HashMap<>();
+    public List<CartItem> getCart() {
+        return new ArrayList<>();
     }
 
 //    @GetMapping("/product/{productId}") //xem chi tiết mặt hàng
@@ -30,24 +50,44 @@ public class CartController {
 //        return "productDetails";
 //    }
 
-    @PostMapping("/addToCart/{productId}")
-    public String addToCart(@PathVariable Long productId, @RequestParam("quantity") int quantity,
-                            @ModelAttribute("cart") Map<Long, CartItem> cart) {
-        Product product = productRepository.findById(productId).orElse(null);
+    @GetMapping("/addToCart/{productId}")
+    public String addToCart(@PathVariable Long productId,
+                            @ModelAttribute("cart") List<CartItem> cart) {
 
-        if (product != null && quantity > 0) {
-            CartItem cartItem = new CartItem();
-            cartItem.setProduct(product);
-            cartItem.setQuantity(quantity);
-            cart.put(productId, cartItem);
+        Product product = productRepository.findById(productId).orElse(null);
+        if (product == null) {
+            return "redirect:/cart/home";
+        } else  {
+            for (CartItem item: cart) {
+                if (item.getProduct().getProduct_id()==productId) {
+                    item.setQuantity(item.getQuantity()+1);
+                    return "redirect:/cart/home";
+                }
+            }
+            cart.add(new CartItem(product, 1));
         }
 
-        return "redirect:/cart/cart";
+
+//        if (product != null && quantity > 0) {
+//            CartItem cartItem = new CartItem();
+//            cartItem.setProduct(product);
+//            cartItem.setQuantity(quantity);
+//            cart.put(productId, cartItem);
+//        }
+
+        return "redirect:/cart/home";
     }
 
     @GetMapping("/cart")
-    public String viewCart(@ModelAttribute("cart") Map<Long, CartItem> cart, Model model) {
-        model.addAttribute("cartItems", cart.values());
+    public String viewCart(@ModelAttribute("cart") List<CartItem> cart, Model model) {
+        model.addAttribute("cartItems", cart);
         return "client/cart";
+    }
+
+    @GetMapping("/checkout")
+    public String checkOutCart(@ModelAttribute("cart") List<CartItem> cart) {
+        HttpSession session = (HttpSession) cart;
+        session.removeAttribute("cart");
+        return "redirect:/cart/home";
     }
 }
