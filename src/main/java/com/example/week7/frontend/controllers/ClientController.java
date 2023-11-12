@@ -26,11 +26,10 @@ public class ClientController {
 
     @GetMapping("/home")
     public String loadHome(Model model) {
-        System.out.println("ngungu");
         Map<Product, String> productStringMap = productService.getProducts();
         model.addAttribute("productStringMap", productStringMap);
 
-        return "client/Home";
+        return "redirect:/cart/home";
     }
 
 }

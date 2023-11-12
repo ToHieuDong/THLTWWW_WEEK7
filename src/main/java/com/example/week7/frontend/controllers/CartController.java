@@ -29,7 +29,6 @@ public class CartController {
 
     @GetMapping("/home")
     public String loadHome(@ModelAttribute("cart") List<CartItem> cart, Model model) {
-        System.out.println("ngungu");
         Map<Product, String> productStringMap = productService.getProducts();
         model.addAttribute("productStringMap", productStringMap);
         int sl=cart.isEmpty()?0:cart.size();
@@ -85,9 +84,8 @@ public class CartController {
     }
 
     @GetMapping("/checkout")
-    public String checkOutCart(@ModelAttribute("cart") List<CartItem> cart) {
-        HttpSession session = (HttpSession) cart;
-        session.removeAttribute("cart");
+    public String checkOutCart( @ModelAttribute("cart") List<CartItem> cart) {
+        cart.clear();
         return "redirect:/cart/home";
     }
 }
